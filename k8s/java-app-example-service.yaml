@@ -1,16 +1,16 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: java-app-example
+  name: javaspb
   labels:
-    app: java-app-example
-    app.kubernetes.io/component: java-app-example
-    app.kubernetes.io/instance: java-app-example
+    app: javaspb
+    app.kubernetes.io/component: javaspb
+    app.kubernetes.io/instance: javaspb
 spec:
   ports:
     - name: 8080-tcp
       protocol: TCP
-      port: 8080
-      targetPort: 8080
+      port: 8181
+      targetPort: 8181
   selector:
-    app: java-app-example
+    app: javaspb

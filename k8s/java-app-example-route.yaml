@@ -1,15 +1,15 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: java-app-example
+  name: javaspb
   labels:
-    app: java-app-example
-    app.kubernetes.io/component: java-app-example
-    app.kubernetes.io/instance: java-app-example
+    app: javaspb
+    app.kubernetes.io/component: javaspb
+    app.kubernetes.io/instance: javaspb
 spec:
   to:
     kind: Service
-    name: java-app-example
+    name: javaspb
     weight: 100
   port:
     targetPort: 8080-tcp
