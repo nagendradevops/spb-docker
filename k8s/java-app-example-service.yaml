@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: java-app-example
+  labels:
+    app: java-app-example
+    app.kubernetes.io/component: java-app-example
+    app.kubernetes.io/instance: java-app-example
+spec:
+  ports:
+    - name: 8080-tcp
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    app: java-app-example
