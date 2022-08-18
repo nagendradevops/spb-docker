@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.amos</groupId>
-    <artifactId>simple-app</artifactId>
+    <artifactId>sample-app</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0</version>
     <name>simple-app</name>
@@ -25,6 +25,20 @@
         <maven.compiler.target>11</maven.compiler.target>
         <java.version>11</java.version>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>sample-app</id>
+            <name>sampleapp-release</name>
+            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sampleapp-release/</url>
+        </repository>
+     
+        <snapshotRepository>
+            <id>sample-app</id>
+            <name>sampleapp-release</name>
+            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sample-snapshot/</url>
+        </snapshotRepository>
+    
+    </distributionManagement>
 
     <dependencies>
 
