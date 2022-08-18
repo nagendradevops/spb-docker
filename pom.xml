@@ -5,11 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.amos</groupId>
-    <artifactId>docker-spring-boot</artifactId>
-    <version>1.0</version>
+    <artifactId>simple-app</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.0</version>
+    <name>simple-app</name>
+    <url>http://maven.apache.org</url>
 
-    <name>docker-spring-boot</name>
-    <url></url>
+    
 
     <parent>
         <groupId>org.springframework.boot</groupId>

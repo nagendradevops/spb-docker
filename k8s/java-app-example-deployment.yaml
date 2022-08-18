@@ -1,23 +1,23 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: java-app-example
+  name: java-app
   labels:
-    app: java-app-example
-    app.kubernetes.io/component: java-app-example
-    app.kubernetes.io/instance: java-app-example
+    app: java-app
+    app.kubernetes.io/component: java-app
+    app.kubernetes.io/instance: java-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: java-app-example
+      app: java-app
   template:
     metadata:
       labels:
-        app: java-app-example
+        app: java-app
     spec:
       containers:
-        - name: java-app-example
+        - name: java-app
           image: docker.io/nagendrarb/java-spring-boot:v1
           ports:
             - containerPort: 8080
