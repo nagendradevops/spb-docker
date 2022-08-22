@@ -31,6 +31,11 @@
             <name>sampleapp-release</name>
             <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sampleapp-release/</url>
         </repository>
+        <snapshotRepository>
+            <id>sample-snap</id>
+            <name>sampleapp-snapshot</name>
+            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sample-snapshot/</url>
+        </snapshotRepository>
         
     </distributionManagement>
 
