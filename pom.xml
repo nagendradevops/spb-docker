@@ -26,11 +26,11 @@
         <java.version>11</java.version>
     </properties>
     <distributionManagement>
-        <!-- <repository>
+        <repository>
             <id>sample-app</id>
             <name>sampleapp-release</name>
             <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sampleapp-release/</url>
-        </repository> -->
+        </repository>
         <snapshotRepository>
             <id>sample-snap</id>
             <name>sampleapp-snapshot</name>
