@@ -8,7 +8,7 @@
     <artifactId>sample-app</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0.SNAPSHOT</version>
-    <name>simple-app</name>
+    <name>sample-app</name>
     <url>http://maven.apache.org</url>
 
     
@@ -50,6 +50,11 @@
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
         <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -76,10 +81,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
+             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -89,7 +91,7 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-            <plugin>
+            <!-- <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
                 <version>1.5.1</version>
@@ -107,7 +109,7 @@
                    <nexusUrl>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io</nexusUrl>
                    <skipStaging>true</skipStaging>
                 </configuration>
-             </plugin>
+             </plugin> -->
 
         </plugins>
     </build>
