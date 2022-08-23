@@ -7,7 +7,7 @@
     <groupId>com.amos</groupId>
     <artifactId>sample-app</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.0.SNAPSHOT</version>
     <name>simple-app</name>
     <url>http://maven.apache.org</url>
 
@@ -26,11 +26,11 @@
         <java.version>11</java.version>
     </properties>
     <distributionManagement>
-        <repository>
+        <!-- <repository>
             <id>sample-app</id>
             <name>sampleapp-release</name>
             <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sampleapp-release/</url>
-        </repository>
+        </repository> -->
         <snapshotRepository>
             <id>sample-snap</id>
             <name>sampleapp-snapshot</name>
@@ -76,6 +76,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -86,6 +89,25 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.5.1</version>
+                <executions>
+                   <execution>
+                      <id>default-deploy</id>
+                      <phase>deploy</phase>
+                      <goals>
+                         <goal>deploy</goal>
+                      </goals>
+                   </execution>
+                </executions>
+                <configuration>
+                   <serverId>nexus</serverId>
+                   <nexusUrl>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io</nexusUrl>
+                   <skipStaging>true</skipStaging>
+                </configuration>
+             </plugin>
 
         </plugins>
     </build>
