@@ -27,15 +27,15 @@
     </properties>
     <distributionManagement>
         <repository>
-            <id>sample-app</id>
-            <name>sampleapp-release</name>
-            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sampleapp-release/</url>
+            <id>sample-app-group</id>
+            <name>sample-app-group</name>
+            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sample-app-group/</url>
         </repository>
-        <snapshotRepository>
+        <!-- <snapshotRepository>
             <id>sample-snap</id>
             <name>sampleapp-snapshot</name>
             <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sample-snapshot/</url>
-        </snapshotRepository>
+        </snapshotRepository> -->
         
     </distributionManagement>
 
@@ -53,6 +53,7 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
