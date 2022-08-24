@@ -27,7 +27,7 @@
     </properties>
     <distributionManagement>
         <repository>
-            <id>sample-app-group</id>
+            <id>sample-app</id>
             <name>sample-app-group</name>
             <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sample-app-group/</url>
         </repository>
