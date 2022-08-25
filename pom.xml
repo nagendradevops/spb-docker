@@ -78,13 +78,13 @@
          </dependency>
 
     </dependencies>
-    <pluginRepositories>
+    <!-- <pluginRepositories>
         <pluginRepository>    
             <id>maven2</id>
             <name>Maven.org</name>
             <url>http://repo.maven.apache.org/maven2/</url>
         </pluginRepository>
-    </pluginRepositories>
+    </pluginRepositories> -->
 
     <build>
 
