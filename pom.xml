@@ -64,27 +64,22 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.jacoco</groupId> 
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.5</version>
-        </dependency>
-
-
     </dependencies>
-    <!-- <pluginRepositories>
-        <pluginRepository>    
-            <id>maven2</id>
-            <name>Maven.org</name>
-            <url>http://repo.maven.apache.org/maven2/</url>
-        </pluginRepository>
-    </pluginRepositories> -->
 
     <build>
 
-        <finalName>spring-boot-web</finalName>
+        <finalName>spring-boot-web</finalName>    
+        <pluginManagement>
+            <plugins>
+              <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
+              </plugin>
+            </plugins>
+          </pluginManagement>   
 
-        <plugins>
+        <plugins>            
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -102,59 +97,7 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.7.0.1746</version>
-              </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.5</version>
-                <executions>
-                    <execution>
-                        <id>jacoco-initialize</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>jacoco-site</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>report</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M4</version>
-                <!-- <configuration>
-                  <argLine>${jacocoArgLine}</argLine>
-                  <reportsDirectory>${project.test.result.directory}/surefire</reportsDirectory>
-                </configuration> -->
-              </plugin>
-            <!-- <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.5.1</version>
-                <executions>
-                   <execution>
-                      <id>default-deploy</id>
-                      <phase>deploy</phase>
-                      <goals>
-                         <goal>deploy</goal>
-                      </goals>
-                   </execution>
-                </executions>
-                <configuration>
-                   <serverId>nexus</serverId>
-                   <nexusUrl>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io</nexusUrl>
-                   <skipStaging>true</skipStaging>
-                </configuration>
-             </plugin> -->
+       
 
         </plugins>
     </build>
