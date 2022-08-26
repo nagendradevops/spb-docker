@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.amos</groupId>
-    <artifactId>sample-app</artifactId>
+    <artifactId>java-app</artifactId>
     <packaging>jar</packaging>
-    <version>1.1.1-SNAPSHOT</version>
-    <name>sample-app</name>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>java-app</name>
     
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -26,14 +26,14 @@
     </properties>
     <distributionManagement>
         <repository>
-            <id>sample-app</id>
-            <name>sampleapp-release</name>
-            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sampleapp-release/</url>
+            <id>java-app</id>
+            <name>java-release</name>
+            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/java-release/</url>
         </repository>
         <snapshotRepository>
-            <id>sample-snap</id>
-            <name>sampleapp-snapshot</name>
-            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/sample-snapshot/</url>
+            <id>java-snap</id>
+            <name>java-snapshot</name>
+            <url>https://nexus3sona-pipelines-tutorial.apps.amosirelanddev.amosonline.io/repository/java-snapshot/</url>
         </snapshotRepository>
         
     </distributionManagement>
@@ -99,6 +99,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
              </plugin>
+             <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.7.0.1746</version>
+              </plugin>
+              <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.6</version>
+              </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
