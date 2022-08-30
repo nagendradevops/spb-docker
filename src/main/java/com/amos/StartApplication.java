@@ -14,7 +14,7 @@ public class StartApplication {
     public String index(final Model model) {
         model.addAttribute("title", "Tekton + Spring Boot + Docker");
         model.addAttribute("msg", "Testing on Teckton Pipeline!!!");
-        model.addAttribute("msg1", "Testing on Teckton Pipeline!");
+        
         return "index";
     }
 
