@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: docker.io/nagendrarb/java-spring-boot:v1
+          image: default-route-openshift-image-registry.apps.amosirelanddev.amosonline.io/pipelines-tutorial/javaspb 
           ports:
             - containerPort: 8080
               protocol: TCP
