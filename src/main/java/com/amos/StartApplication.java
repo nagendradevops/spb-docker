@@ -13,7 +13,7 @@ public class StartApplication {
     @GetMapping("/")
     public String index(final Model model) {
         model.addAttribute("title", "Tekton + Spring Boot + Docker");
-        model.addAttribute("msg", "TEKTON PiPeLiNeS *** its  with last run !!! ");
+        model.addAttribute("msg", "Tekton *** Pipeline !!! ");
         
         return "index";
     }
