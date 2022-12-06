@@ -7,7 +7,7 @@
     <groupId>com.amos</groupId>
     <artifactId>java-app</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.2</version>
+    <version>0.0.1</version>
     <name>java-app</name>
     
     <parent>
@@ -28,12 +28,12 @@
         <repository>
             <id>java-app</id>
             <name>java-release</name>
-            <url>https://nexus3-pipelines-tutorial.apps.amoslondondev.amosonline.io/repository/java-release/</url>
+            <url>https://nexus3-openshift-pipelines.apps.amoslondondev.amosonline.io/repository/java-release/</url>
         </repository>
         <snapshotRepository>
             <id>java-snap</id>
             <name>java-snapshot</name>
-            <url>https://nexus3-pipelines-tutorial.apps.amoslondondev.amosonline.io/repository/java-snap/</url>
+            <url>https://nexus3-openshift-pipelines.apps.amoslondondev.amosonline.io/repository/java-snap/</url>
         </snapshotRepository>
         
     </distributionManagement>
