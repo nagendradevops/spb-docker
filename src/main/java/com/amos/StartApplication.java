@@ -13,7 +13,7 @@ public class StartApplication {
     @GetMapping("/")
     public String index(final Model model) {
         model.addAttribute("title", "Tekton + Spring Boot + Docker");
-        model.addAttribute("msg", "reconfigured the listener, secrect has changed");
+        model.addAttribute("msg", "reconfigured the listener, changed");
         
         return "index";
     }
