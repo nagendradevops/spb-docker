@@ -13,7 +13,7 @@ public class StartApplication {
     @GetMapping("/")
     public String index(final Model model) {
         model.addAttribute("title", "Tekton + Spring Boot + Docker");
-        model.addAttribute("msg", "Again its failing the pipeline with initial task");
+        model.addAttribute("msg", "Finally we have configured the webhook triggers with Tekton Pipelines!!!");
         
         return "index";
     }
