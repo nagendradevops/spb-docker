@@ -168,6 +168,18 @@
             </plugins>
           </build>
         </profile>
+        <profile>
+          <id>sonar</id>
+          <activation>
+          <activeByDefault>true</activeByDefault>
+          </activation>
+          <properties>
+          <!-- Optional URL to server. Default value is http://localhost:9000 -->
+          <sonar.host.url>
+            https://sonarqube-pipelines-tutorial.apps.amoslondondev.amosonline.io 
+          </sonar.host.url>
+          </properties>
+          </profile>
       </profiles>
 
 
