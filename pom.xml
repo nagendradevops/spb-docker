@@ -8,7 +8,7 @@
     <artifactId>java-app</artifactId>
     <packaging>jar</packaging>
     <version>0.0.4</version>
-    <name>java-app</name>
+    <name>java-snap</name>
     
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -91,6 +91,13 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.6</version>
               </plugin>
+           
+                <plugin>
+                  <groupId>org.codehaus.sonar</groupId>
+                  <artifactId>sonar-maven-plugin</artifactId>
+                  <version>2.5</version>
+                </plugin>
+             
             </plugins>
           </pluginManagement>   
 
