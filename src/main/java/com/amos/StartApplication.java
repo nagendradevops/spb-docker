@@ -13,7 +13,7 @@ public class StartApplication {
     @GetMapping("/")
     public String index(final Model model) {
         model.addAttribute("title", "Tekton + Spring Boot + Docker");
-        model.addAttribute("msg", "We have configured the webhook triggers with Tekton Pipelines!!!");
+        model.addAttribute("msg", "We are doing automation for Tekton Pipelines!!!");
         
         return "index";
     }
