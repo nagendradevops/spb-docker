@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: default-route-openshift-image-registry.apps.amoslondondev.amosonline.io/openshift-pipelines/javaspb:latest
+          image: default-route-openshift-image-registry.apps.amoslondondev.amosonline.io/openshift-pipelines/javaspb:0.4
           ports:
             - containerPort: 8080
               protocol: TCP
